@@ -26,7 +26,7 @@ test('new', async({page}) => {
 
 
 
-test.only('test coin.zerodha', async ({ page }) => {
+test('test coin.zerodha', async ({ page }) => {
   await page.goto('https://coin.zerodha.com/');
   await page.getByRole('link', { name: 'Explore' }).click();
   await page.getByText('Equity', { exact: true }).click();
