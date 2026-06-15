@@ -2,7 +2,7 @@ import { PimPage } from "../pages/PimPage";
 import { Employee } from "../types/Employee"
 
 
-
+ 
 export class PimFlows{
 
     constructor(private pimpage: PimPage){}

@@ -1,5 +1,5 @@
 import {test,expect} from '../../fixtures/baseTest'
-//import { AdminPage } from '../pages/AdminPage';
+//import { AdminPage } from '../../pages/AdminPage';
 
 
 

@@ -4,6 +4,8 @@ import { PimPage } from '../pages/PimPage';
 import { HeaderComponent } from '../pages/components/HeaderComponent';
 import { AdminPage } from '../pages/AdminPage';
 import { PimFlows } from '../flows/PimFlows';
+import { BuzzPage } from '../pages/BuzzPage';
+import { DashBoard } from '../pages/DashBoard';
 
 
 /* 
@@ -18,7 +20,9 @@ interface MyFixtures {
    readonly pimpage : PimPage;
    readonly adminpage:AdminPage;
    readonly header : HeaderComponent;
-   readonly pimflows: PimFlows
+   readonly pimflows: PimFlows;
+   readonly buzzPage : BuzzPage;
+   readonly dashBoard : DashBoard;
 };
 
 
@@ -44,7 +48,15 @@ export const test = base.extend<MyFixtures>({
     },
     pimflows : async({pimpage},use)=>{
         await use(new PimFlows(pimpage));
+    },
+    buzzPage : async({page},use)=>{
+        await use(new BuzzPage(page));
+    },
+    dashBoard : async({page},use)=>{
+        await use(new DashBoard(page));
+
     }
+
 });
 
 export {expect} from '@playwright/test';  // re-export expect from baseTest to provide a single import point for test utilities. This keeps test files clean and allows future extension of assertions centrally.
